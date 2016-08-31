@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="df5c8335e3314bd7bdccb83bca8dd32f" Name="Diagram1">
+        <EntityTypeShape EntityType="job_management_twoModel.education" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_management_twoModel.employee" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_management_twoModel.employee_tag" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_management_twoModel.employeer" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_management_twoModel.job_applicant" Width="1.5" PointX="7.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_management_twoModel.job_applied" Width="1.5" PointX="7.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_management_twoModel.job_circular" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_management_twoModel.job_circular_tag" Width="1.5" PointX="7.5" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_management_twoModel.user" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="job_management_twoModel.id_employee_education_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="job_management_twoModel.fk_job_applied_employee1" ManuallyRouted="false" />
+        <AssociationConnector Association="job_management_twoModel.id_job_applicant_employee_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="job_management_twoModel.id_tag_employee_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="job_management_twoModel.id_user_employee_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="job_management_twoModel.fk_job_circular_employeer1" ManuallyRouted="false" />
+        <AssociationConnector Association="job_management_twoModel.fk_table1_user1" ManuallyRouted="false" />
+        <AssociationConnector Association="job_management_twoModel.id_job_applicant_job_circular_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="job_management_twoModel.fk_job_applied_job_circular1" ManuallyRouted="false" />
+        <AssociationConnector Association="job_management_twoModel.id_tag_job_circular_fk" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

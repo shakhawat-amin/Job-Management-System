@@ -1,0 +1,50 @@
+﻿@model job_management_final.employeer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>employeer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.office_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.office_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contact_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contact_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.office_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.office_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_employeer }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

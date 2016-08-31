@@ -1,0 +1,104 @@
+﻿@model  IEnumerable<job_management_final.education>
+
+@{
+    ViewBag.Title = "Show_Education_JobSeeker";
+}
+
+<h2>Show_Education_JobSeeker</h2>
+
+<div>
+    <h4>education</h4>
+    <hr />
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.degree_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.scale)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.score)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.institute_name)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var edu in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => edu.degree_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => edu.score)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => edu.scale)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => edu.institute_name)
+                </td>
+            </tr>
+        }
+    </table>
+    @*<dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.degree_name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.degree_name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.score)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.score)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.scale)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.scale)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.passing_year)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.passing_year)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.institute_name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.institute_name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.employee.sex)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.employee.sex)
+            </dd>
+
+        </dl>*@
+</div>
+<p>
+    @Html.ActionLink("Back", "Show_Education_JobSeeker2", @Model.First(), new { @class = "btn btn-danger" })
+</p>

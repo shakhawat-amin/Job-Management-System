@@ -1,0 +1,52 @@
+﻿@model job_management_final.employee_tag
+
+@{
+    ViewBag.Title = "Job_tags_JobSeeker";
+}
+
+<h2>Job_tags_JobSeeker</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>employee_tag</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.id_employee_tag, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.id_employee_tag)
+                    @Html.ValidationMessageFor(model => model.id_employee_tag)
+                </div>
+            </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.tag_name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tag_name)
+                @Html.ValidationMessageFor(model => model.tag_name)
+            </div>
+        </div>
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.id_employee, "id_employee", new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("id_employee", String.Empty)
+                    @Html.ValidationMessageFor(model => model.id_employee)
+                </div>
+            </div>*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Add tag" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

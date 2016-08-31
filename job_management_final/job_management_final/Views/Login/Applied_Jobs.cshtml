@@ -1,0 +1,67 @@
+﻿@model IEnumerable<job_management_final.Models.AppliedJobsViewModel>
+
+@{
+    ViewBag.Title = "Applied_Jobs";
+}
+
+<h2> Your Jobs</h2>
+<p> todays time @DateTime.Now</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().job_circular1.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().job_circular1.salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().job_circular1.deadline)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().job_circular1.experience)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().job_circular1.vacancy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().job_applied1.status)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.employee.sex)
+        </th>*@
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <th>
+            @Html.DisplayFor(modelItem => item.job_circular1.title)
+        </th>
+        <th>
+            @Html.DisplayFor(modelItem => item.job_circular1.salary)
+        </th>
+        <th>
+            @Html.DisplayFor(modelItem => item.job_circular1.deadline)
+        </th>
+        <th>
+            @Html.DisplayFor(modelItem => item.job_circular1.experience)
+        </th>
+        <th>
+            @Html.DisplayFor(modelItem => item.job_circular1.vacancy)
+        </th>
+        <th>
+            @Html.DisplayFor(modelItem => item.job_applied1.status)
+        </th>
+        
+        
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_job_applied }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_job_applied }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_job_applied })
+        </td>*@
+    </tr>
+}
+
+</table>

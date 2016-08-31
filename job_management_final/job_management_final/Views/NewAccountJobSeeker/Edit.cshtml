@@ -1,0 +1,114 @@
+﻿@model job_management_final.employee
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>employee</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.id_employee)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.id_user, "id_user", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("id_user", String.Empty)
+                @Html.ValidationMessageFor(model => model.id_user)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.age, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.age)
+                @Html.ValidationMessageFor(model => model.age)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.sex, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.sex)
+                @Html.ValidationMessageFor(model => model.sex)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.first_name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.first_name)
+                @Html.ValidationMessageFor(model => model.first_name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.last_name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.last_name)
+                @Html.ValidationMessageFor(model => model.last_name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.father_name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.father_name)
+                @Html.ValidationMessageFor(model => model.father_name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.mother_name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.mother_name)
+                @Html.ValidationMessageFor(model => model.mother_name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.contact_number, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.contact_number)
+                @Html.ValidationMessageFor(model => model.contact_number)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.local_address, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.local_address)
+                @Html.ValidationMessageFor(model => model.local_address)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.parmanent_address, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.parmanent_address)
+                @Html.ValidationMessageFor(model => model.parmanent_address)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

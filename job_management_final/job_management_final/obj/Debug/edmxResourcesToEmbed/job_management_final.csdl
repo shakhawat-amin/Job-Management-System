@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="job_management_twoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="education">
+    <Key>
+      <PropertyRef Name="id_education" />
+    </Key>
+    <Property Name="id_education" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_employee" Type="Int64" Nullable="false" />
+    <Property Name="degree_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="score" Type="Decimal" />
+    <Property Name="scale" Type="Decimal" />
+    <Property Name="passing_year" Type="DateTime" />
+    <Property Name="institute_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="employee" Relationship="Self.id_employee_education_fk" FromRole="education" ToRole="employee" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="id_employee" />
+    </Key>
+    <Property Name="id_employee" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_user" Type="Int64" Nullable="false" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="sex" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="first_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="last_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="father_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="mother_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="contact_number" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="local_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="parmanent_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="educations" Relationship="Self.id_employee_education_fk" FromRole="employee" ToRole="education" />
+    <NavigationProperty Name="job_applied" Relationship="Self.fk_job_applied_employee1" FromRole="employee" ToRole="job_applied" />
+    <NavigationProperty Name="job_applicant" Relationship="Self.id_job_applicant_employee_fk" FromRole="employee" ToRole="job_applicant" />
+    <NavigationProperty Name="employee_tag" Relationship="Self.id_tag_employee_fk" FromRole="employee" ToRole="employee_tag" />
+    <NavigationProperty Name="user" Relationship="Self.id_user_employee_fk" FromRole="employee" ToRole="user" />
+  </EntityType>
+  <EntityType Name="employee_tag">
+    <Key>
+      <PropertyRef Name="id_employee_tag" />
+    </Key>
+    <Property Name="id_employee_tag" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tag_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="id_employee" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="employee" Relationship="Self.id_tag_employee_fk" FromRole="employee_tag" ToRole="employee" />
+  </EntityType>
+  <EntityType Name="employeer">
+    <Key>
+      <PropertyRef Name="id_employeer" />
+    </Key>
+    <Property Name="id_employeer" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_user" Type="Int64" Nullable="false" />
+    <Property Name="office_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="contact_number" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="office_address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="job_circular" Relationship="Self.fk_job_circular_employeer1" FromRole="employeer" ToRole="job_circular" />
+    <NavigationProperty Name="user" Relationship="Self.fk_table1_user1" FromRole="employeer" ToRole="user" />
+  </EntityType>
+  <EntityType Name="job_applicant">
+    <Key>
+      <PropertyRef Name="id_job_applicant" />
+    </Key>
+    <Property Name="id_job_applicant" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_employee" Type="Int64" Nullable="false" />
+    <Property Name="id_job_circular" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="employee" Relationship="Self.id_job_applicant_employee_fk" FromRole="job_applicant" ToRole="employee" />
+    <NavigationProperty Name="job_circular" Relationship="Self.id_job_applicant_job_circular_fk" FromRole="job_applicant" ToRole="job_circular" />
+  </EntityType>
+  <EntityType Name="job_applied">
+    <Key>
+      <PropertyRef Name="id_job_applied" />
+    </Key>
+    <Property Name="id_job_applied" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_employee" Type="Int64" Nullable="false" />
+    <Property Name="id_job_circular" Type="Int64" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="employee" Relationship="Self.fk_job_applied_employee1" FromRole="job_applied" ToRole="employee" />
+    <NavigationProperty Name="job_circular" Relationship="Self.fk_job_applied_job_circular1" FromRole="job_applied" ToRole="job_circular" />
+  </EntityType>
+  <EntityType Name="job_circular">
+    <Key>
+      <PropertyRef Name="id_job_circular" />
+    </Key>
+    <Property Name="id_job_circular" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="salary" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deadline" Type="DateTime" Nullable="false" />
+    <Property Name="experience" Type="Int32" />
+    <Property Name="vacancy" Type="Int32" />
+    <Property Name="id_employeer" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="employeer" Relationship="Self.fk_job_circular_employeer1" FromRole="job_circular" ToRole="employeer" />
+    <NavigationProperty Name="job_applicant" Relationship="Self.id_job_applicant_job_circular_fk" FromRole="job_circular" ToRole="job_applicant" />
+    <NavigationProperty Name="job_applied" Relationship="Self.fk_job_applied_job_circular1" FromRole="job_circular" ToRole="job_applied" />
+    <NavigationProperty Name="job_circular_tag" Relationship="Self.id_tag_job_circular_fk" FromRole="job_circular" ToRole="job_circular_tag" />
+  </EntityType>
+  <EntityType Name="job_circular_tag">
+    <Key>
+      <PropertyRef Name="id_job_circular_tag" />
+    </Key>
+    <Property Name="id_job_circular_tag" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tag_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="id_job_circular" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="job_circular" Relationship="Self.id_tag_job_circular_fk" FromRole="job_circular_tag" ToRole="job_circular" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id_user" />
+    </Key>
+    <Property Name="id_user" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_role" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="employees" Relationship="Self.id_user_employee_fk" FromRole="user" ToRole="employee" />
+    <NavigationProperty Name="employeers" Relationship="Self.fk_table1_user1" FromRole="user" ToRole="employeer" />
+  </EntityType>
+  <Association Name="id_employee_education_fk">
+    <End Role="employee" Type="Self.employee" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="education" Type="Self.education" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id_employee" />
+      </Principal>
+      <Dependent Role="education">
+        <PropertyRef Name="id_employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_job_applied_employee1">
+    <End Role="employee" Type="Self.employee" Multiplicity="1" />
+    <End Role="job_applied" Type="Self.job_applied" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id_employee" />
+      </Principal>
+      <Dependent Role="job_applied">
+        <PropertyRef Name="id_employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="id_job_applicant_employee_fk">
+    <End Role="employee" Type="Self.employee" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="job_applicant" Type="Self.job_applicant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id_employee" />
+      </Principal>
+      <Dependent Role="job_applicant">
+        <PropertyRef Name="id_employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="id_tag_employee_fk">
+    <End Role="employee" Type="Self.employee" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="employee_tag" Type="Self.employee_tag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id_employee" />
+      </Principal>
+      <Dependent Role="employee_tag">
+        <PropertyRef Name="id_employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="id_user_employee_fk">
+    <End Role="user" Type="Self.user" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="employee" Type="Self.employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="id_user" />
+      </Principal>
+      <Dependent Role="employee">
+        <PropertyRef Name="id_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_job_circular_employeer1">
+    <End Role="employeer" Type="Self.employeer" Multiplicity="1" />
+    <End Role="job_circular" Type="Self.job_circular" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employeer">
+        <PropertyRef Name="id_employeer" />
+      </Principal>
+      <Dependent Role="job_circular">
+        <PropertyRef Name="id_employeer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_table1_user1">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="employeer" Type="Self.employeer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="id_user" />
+      </Principal>
+      <Dependent Role="employeer">
+        <PropertyRef Name="id_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="id_job_applicant_job_circular_fk">
+    <End Role="job_circular" Type="Self.job_circular" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="job_applicant" Type="Self.job_applicant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="job_circular">
+        <PropertyRef Name="id_job_circular" />
+      </Principal>
+      <Dependent Role="job_applicant">
+        <PropertyRef Name="id_job_circular" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_job_applied_job_circular1">
+    <End Role="job_circular" Type="Self.job_circular" Multiplicity="1" />
+    <End Role="job_applied" Type="Self.job_applied" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="job_circular">
+        <PropertyRef Name="id_job_circular" />
+      </Principal>
+      <Dependent Role="job_applied">
+        <PropertyRef Name="id_job_circular" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="id_tag_job_circular_fk">
+    <End Role="job_circular" Type="Self.job_circular" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="job_circular_tag" Type="Self.job_circular_tag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="job_circular">
+        <PropertyRef Name="id_job_circular" />
+      </Principal>
+      <Dependent Role="job_circular_tag">
+        <PropertyRef Name="id_job_circular" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="job_management_twoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="educations" EntityType="Self.education" />
+    <EntitySet Name="employees" EntityType="Self.employee" />
+    <EntitySet Name="employee_tag" EntityType="Self.employee_tag" />
+    <EntitySet Name="employeers" EntityType="Self.employeer" />
+    <EntitySet Name="job_applicant" EntityType="Self.job_applicant" />
+    <EntitySet Name="job_applied" EntityType="Self.job_applied" />
+    <EntitySet Name="job_circular" EntityType="Self.job_circular" />
+    <EntitySet Name="job_circular_tag" EntityType="Self.job_circular_tag" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <AssociationSet Name="id_employee_education_fk" Association="Self.id_employee_education_fk">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="education" EntitySet="educations" />
+    </AssociationSet>
+    <AssociationSet Name="fk_job_applied_employee1" Association="Self.fk_job_applied_employee1">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="job_applied" EntitySet="job_applied" />
+    </AssociationSet>
+    <AssociationSet Name="id_job_applicant_employee_fk" Association="Self.id_job_applicant_employee_fk">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="job_applicant" EntitySet="job_applicant" />
+    </AssociationSet>
+    <AssociationSet Name="id_tag_employee_fk" Association="Self.id_tag_employee_fk">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="employee_tag" EntitySet="employee_tag" />
+    </AssociationSet>
+    <AssociationSet Name="id_user_employee_fk" Association="Self.id_user_employee_fk">
+      <End Role="user" EntitySet="users" />
+      <End Role="employee" EntitySet="employees" />
+    </AssociationSet>
+    <AssociationSet Name="fk_job_circular_employeer1" Association="Self.fk_job_circular_employeer1">
+      <End Role="employeer" EntitySet="employeers" />
+      <End Role="job_circular" EntitySet="job_circular" />
+    </AssociationSet>
+    <AssociationSet Name="fk_table1_user1" Association="Self.fk_table1_user1">
+      <End Role="user" EntitySet="users" />
+      <End Role="employeer" EntitySet="employeers" />
+    </AssociationSet>
+    <AssociationSet Name="id_job_applicant_job_circular_fk" Association="Self.id_job_applicant_job_circular_fk">
+      <End Role="job_circular" EntitySet="job_circular" />
+      <End Role="job_applicant" EntitySet="job_applicant" />
+    </AssociationSet>
+    <AssociationSet Name="fk_job_applied_job_circular1" Association="Self.fk_job_applied_job_circular1">
+      <End Role="job_circular" EntitySet="job_circular" />
+      <End Role="job_applied" EntitySet="job_applied" />
+    </AssociationSet>
+    <AssociationSet Name="id_tag_job_circular_fk" Association="Self.id_tag_job_circular_fk">
+      <End Role="job_circular" EntitySet="job_circular" />
+      <End Role="job_circular_tag" EntitySet="job_circular_tag" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

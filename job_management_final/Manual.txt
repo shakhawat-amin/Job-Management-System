@@ -1,0 +1,11 @@
+1. make a mysql database using "job_management_two.sql" file.
+
+2. then open "job_management_final.sln" using visual studio.
+
+3. open server explorer
+
+4. in server explorer create data Connection with job_management_two with your server name and password.
+
+5 now open "NewAccountController.cs" class which is in Controllers folder
+
+6. now run it.

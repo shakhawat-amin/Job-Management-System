@@ -1,0 +1,40 @@
+﻿@model job_management_final.employee
+
+<h1>You have already applied for this job</h1>
+<h4> Try new Jobs </h4>
+
+<hr />
+<p>
+
+    <div class="row">
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Recomended Jobs", "Search_Jobs_JobSeeker", Model, new { @class = " btn btn-primary" })
+        </div>
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Search", "Search_Attribute", Model, new { @class = " btn btn-success" })
+        </div>
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Applied Jobs", "Applied_Jobs", Model, new { @class = " btn btn-danger" })
+        </div>
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Top Trend", "Top_Trend", Model, new { @class = " btn btn-info" })
+        </div>
+       
+    </div>
+    <div> <br/></div>
+    <div class="row">
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Show Job tags", "Show_Job_tags", Model, new { @class = " btn btn-primary" })
+        </div>
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Add Job tags", "Job_tags_JobSeeker", Model, new { @class = " btn btn-success" })
+        </div>
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Show Education", "Show_Education_JobSeeker", Model, new { @class = " btn btn-danger" })
+        </div>
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Add Education", "Education_JobSeeker", Model, new { @class = " btn btn-info" })
+        </div>
+    </div>
+    @*  @Html.ActionLink("Back to List", "Details_JobSeeker")*@
+</p>

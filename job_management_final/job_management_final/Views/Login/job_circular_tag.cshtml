@@ -1,0 +1,53 @@
+﻿@model job_management_final.job_circular_tag
+
+@{
+    ViewBag.Title = "job_circular_tag";
+}
+
+<h2>job_circular_tag</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>job_circular_tag</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.id_job_circular_tag, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.id_job_circular_tag)
+                    @Html.ValidationMessageFor(model => model.id_job_circular_tag)
+                </div>
+            </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.tag_name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tag_name)
+                @Html.ValidationMessageFor(model => model.tag_name)
+            </div>
+        </div>
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.id_job_circular, "id_job_circular", new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("id_job_circular", String.Empty)
+                    @Html.ValidationMessageFor(model => model.id_job_circular)
+                </div>
+            </div>*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Finish" name="finish" class="btn btn-danger" />
+                <input type="submit" value="Next tag" name="next_tag" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+@*<div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@

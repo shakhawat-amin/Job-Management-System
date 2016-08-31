@@ -1,0 +1,74 @@
+﻿@model job_management_final.Models.EmployeerViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.userEmployeer.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userEmployeer.username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.userEmployeer.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userEmployeer.email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.employeerEmployeer.office_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeerEmployeer.office_name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.employeerEmployeer.office_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeerEmployeer.office_address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.employeerEmployeer.contact_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeerEmployeer.contact_number)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.userEmployeer.user_role)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userEmployeer.user_role)
+        </dd>
+
+    </dl>
+</div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>see your jobs' candidates</h3>
+        <p>@Html.ActionLink("  All Jobs  ", "Show_Jobs_Employeer", "Login", Model.employeerEmployeer, new { @class = "btn btn-primary" })</p>
+    </div>
+
+    <div class="col-md-4">
+        <h3>Add New Jobs</h3>
+        <p>@Html.ActionLink("  Add Job  ", "Job_Circular_employeer", "Login", Model.employeerEmployeer, new { @class = "btn btn-danger" })</p>
+    </div>
+</div>
+
+@*<p>
+        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@

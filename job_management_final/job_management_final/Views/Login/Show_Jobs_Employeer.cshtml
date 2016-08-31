@@ -1,0 +1,68 @@
+﻿@model IEnumerable<job_management_final.job_circular>
+
+@{
+    ViewBag.Title = "Show_Jobs_Employeer";
+}
+
+<h2>Show_Jobs_Employeer</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "job_circular_employeer", Model.First(), new { @class = "btn btn-primary" })
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.deadline)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.experience)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vacancy)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.employeer.office_name)
+            </th>*@
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.deadline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.experience)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vacancy)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.employeer.office_name)
+                </td>*@
+            @*<td>
+                @Html.ActionLink("Edit", "Edit_Jobs_Employeer", new { id = item.id_job_circular }, new { @class = "btn btn-warning" }) 
+            </td>*@
+             <td>
+                @Html.ActionLink("Job Applicants ", "Job_Applicants", new { id_job_circular = item.id_job_circular }, new { @class = "btn btn-primary" }) 
+              </td>
+            @*<td>
+                  @Html.ActionLink("Delete", "Delete", new { id = item.id_job_circular }, new { @class = "btn btn-danger" })
+            </td>*@
+        </tr>
+    }
+
+</table>

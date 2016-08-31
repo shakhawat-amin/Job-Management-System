@@ -1,0 +1,128 @@
+﻿@model job_management_final.Models.JobSeekerViewModel
+
+
+
+<h1>Hi! @Model.userJobSeeker.username</h1>
+<h2>your personal details</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.employeeJobSeeker.age)
+
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeeJobSeeker.age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employeeJobSeeker.sex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeeJobSeeker.sex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employeeJobSeeker.first_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeeJobSeeker.first_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employeeJobSeeker.last_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeeJobSeeker.last_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employeeJobSeeker.father_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeeJobSeeker.father_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employeeJobSeeker.mother_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeeJobSeeker.mother_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employeeJobSeeker.contact_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeeJobSeeker.contact_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employeeJobSeeker.local_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeeJobSeeker.local_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employeeJobSeeker.parmanent_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeeJobSeeker.parmanent_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.userJobSeeker.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userJobSeeker.username)
+        </dd>
+
+    </dl>
+</div>
+<p>
+
+    <div class="row">
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Recomended Jobs", "Search_Jobs_JobSeeker", Model.employeeJobSeeker, new { @class = " btn btn-primary" })
+        </div>
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Search", "Search_Attribute", Model.employeeJobSeeker, new { @class = " btn btn-success" })
+        </div>
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Applied Jobs", "Applied_Jobs", Model.employeeJobSeeker, new { @class = " btn btn-danger" })
+        </div>
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Top Trend", "Top_Trend", Model.employeeJobSeeker, new { @class = " btn btn-info" })
+        </div>
+        
+    </div>
+    <div> <br /></div>
+    <div class="row">
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Show Job tags", "Show_Job_tags", Model.employeeJobSeeker, new { @class = " btn btn-primary" })
+        </div>
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Add Job tags", "Job_tags_JobSeeker", Model.employeeJobSeeker, new { @class = " btn btn-success" })
+        </div>
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Show Education", "Show_Education_JobSeeker", Model.employeeJobSeeker, new { @class = " btn btn-danger" })
+        </div>
+        <div class="col-md-3 margin-top-40">
+            @Html.ActionLink("Add Education", "Education_JobSeeker", Model.employeeJobSeeker, new { @class = " btn btn-info" })
+        </div>
+    </div>
+    @*  @Html.ActionLink("Back to List", "Details_JobSeeker")*@
+</p>

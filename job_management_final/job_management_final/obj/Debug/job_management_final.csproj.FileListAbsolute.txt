@@ -1,0 +1,58 @@
+D:\Codes\Database Project\job_management_final\job_management_final\bin\job_management_final.dll.config
+D:\Codes\Database Project\job_management_final\job_management_final\bin\job_management_final.dll
+D:\Codes\Database Project\job_management_final\job_management_final\bin\job_management_final.pdb
+D:\Codes\Database Project\job_management_final\job_management_final\bin\Antlr3.Runtime.dll
+D:\Codes\Database Project\job_management_final\job_management_final\bin\EntityFramework.dll
+D:\Codes\Database Project\job_management_final\job_management_final\bin\Microsoft.Web.Infrastructure.dll
+D:\Codes\Database Project\job_management_final\job_management_final\bin\MySql.Web.v20.dll
+D:\Codes\Database Project\job_management_final\job_management_final\bin\Newtonsoft.Json.dll
+D:\Codes\Database Project\job_management_final\job_management_final\bin\System.Web.Helpers.dll
+D:\Codes\Database Project\job_management_final\job_management_final\bin\System.Web.Mvc.dll
+D:\Codes\Database Project\job_management_final\job_management_final\bin\System.Web.Optimization.dll
+D:\Codes\Database Project\job_management_final\job_management_final\bin\System.Web.Razor.dll
+D:\Codes\Database Project\job_management_final\job_management_final\bin\System.Web.WebPages.Deployment.dll
+D:\Codes\Database Project\job_management_final\job_management_final\bin\System.Web.WebPages.dll
+D:\Codes\Database Project\job_management_final\job_management_final\bin\System.Web.WebPages.Razor.dll
+D:\Codes\Database Project\job_management_final\job_management_final\bin\WebGrease.dll
+D:\Codes\Database Project\job_management_final\job_management_final\bin\EntityFramework.xml
+D:\Codes\Database Project\job_management_final\job_management_final\bin\System.Web.Helpers.xml
+D:\Codes\Database Project\job_management_final\job_management_final\bin\System.Web.Mvc.xml
+D:\Codes\Database Project\job_management_final\job_management_final\bin\System.Web.Optimization.xml
+D:\Codes\Database Project\job_management_final\job_management_final\bin\System.Web.Razor.xml
+D:\Codes\Database Project\job_management_final\job_management_final\bin\System.Web.WebPages.xml
+D:\Codes\Database Project\job_management_final\job_management_final\bin\System.Web.WebPages.Deployment.xml
+D:\Codes\Database Project\job_management_final\job_management_final\bin\System.Web.WebPages.Razor.xml
+D:\Codes\Database Project\job_management_final\job_management_final\bin\Newtonsoft.Json.xml
+D:\Codes\Database Project\job_management_final\job_management_final\bin\Antlr3.Runtime.pdb
+D:\Codes\Database Project\job_management_final\job_management_final\obj\Debug\job_management_final.dll
+D:\Codes\Database Project\job_management_final\job_management_final\obj\Debug\job_management_final.pdb
+D:\Codes\Database Project\job_management_final\job_management_final\obj\Debug\job_management_final.csprojResolveAssemblyReference.cache
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\job_management_final.dll.config
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\job_management_final.dll
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\job_management_final.pdb
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\Antlr3.Runtime.dll
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\EntityFramework.dll
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\Microsoft.Web.Infrastructure.dll
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\MySql.Web.v20.dll
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\Newtonsoft.Json.dll
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\System.Web.Helpers.dll
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\System.Web.Mvc.dll
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\System.Web.Optimization.dll
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\System.Web.Razor.dll
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\System.Web.WebPages.Deployment.dll
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\System.Web.WebPages.dll
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\System.Web.WebPages.Razor.dll
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\WebGrease.dll
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\EntityFramework.xml
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\System.Web.Helpers.xml
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\System.Web.Mvc.xml
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\System.Web.Optimization.xml
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\System.Web.Razor.xml
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\System.Web.WebPages.xml
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\System.Web.WebPages.Deployment.xml
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\System.Web.WebPages.Razor.xml
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\Newtonsoft.Json.xml
+D:\Codes\Database Project final\job_management_final\job_management_final\bin\Antlr3.Runtime.pdb
+D:\Codes\Database Project final\job_management_final\job_management_final\obj\Debug\job_management_final.csprojResolveAssemblyReference.cache
+D:\Codes\Database Project final\job_management_final\job_management_final\obj\Debug\job_management_final.dll
+D:\Codes\Database Project final\job_management_final\job_management_final\obj\Debug\job_management_final.pdb

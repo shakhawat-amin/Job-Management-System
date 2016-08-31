@@ -1,0 +1,58 @@
+﻿@model IEnumerable<job_management_final.Models.Top_Trend_Model>
+
+@{
+    ViewBag.Title = "Top_Trend";
+}
+
+<h2>Top Trend</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().job_circular1.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().job_circular1.salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().job_circular1.deadline)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().job_circular1.experience)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().job_circular1.vacancy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().applicant_count)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.job_circular1.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.job_circular1.salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.job_circular1.deadline)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.job_circular1.experience)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.job_circular1.vacancy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.applicant_count)
+        </td>
+        <td>
+            @Html.ActionLink("Apply", "Apply_JobSeeker", new { employee_id = item.employee1.id_employee, jc_id = item.job_circular1.id_job_circular }, new { @class = "btn btn-primary" })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,99 @@
+﻿@model job_management_final.Models.EmployeerViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+<script src="~/Scripts/jquery-2.2.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<h2>Create</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>employeer</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.id_employeer, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.id_employeer)
+                    @Html.ValidationMessageFor(model => model.id_employeer)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.id_user, "id_user", new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("id_user", String.Empty)
+                    @Html.ValidationMessageFor(model => model.id_user)
+                </div>
+            </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.userEmployeer.username, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.userEmployeer.username)
+                @Html.ValidationMessageFor(model => model.userEmployeer.username)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.userEmployeer.email, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.userEmployeer.email)
+                @Html.ValidationMessageFor(model => model.userEmployeer.email)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.userEmployeer.password, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.PasswordFor(model => model.userEmployeer.password)
+                @Html.ValidationMessageFor(model => model.userEmployeer.password)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.employeerEmployeer.office_name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.employeerEmployeer.office_name)
+                @Html.ValidationMessageFor(model => model.employeerEmployeer.office_name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.employeerEmployeer.contact_number, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.employeerEmployeer.contact_number)
+                @Html.ValidationMessageFor(model => model.employeerEmployeer.contact_number)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.employeerEmployeer.office_address, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.employeerEmployeer.office_address)
+                @Html.ValidationMessageFor(model => model.employeerEmployeer.office_address)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+
+<address>
+    mail: s.shakhawat.amin@gmail.com<br />
+    <abbr title="Address">address:</abbr>   75, Tapaban, Resedencial Area, Sylhet.<br />
+    <abbr title="Phone number">Phone no. </abbr>
+    +8801926238182
+</address>
+
+<!--
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>                                                              -->
+<h4>@ViewBag.theMessage</h4>
+
+<form method="post">
+    <textarea name="message"></textarea>
+    <input type="submit" value="send" />
+
+</form>

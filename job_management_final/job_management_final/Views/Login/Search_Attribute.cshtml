@@ -1,0 +1,50 @@
+﻿@model job_management_final.Models.Search
+
+@{
+    ViewBag.Title = "Search_Attribute";
+}
+
+<h2>Search_Attribute</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>education</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.AttributeName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(model => model.AttributeName, "Office")   Office
+                @Html.RadioButtonFor(model => model.AttributeName, "Tittle") Tittle
+                @Html.RadioButtonFor(model => model.AttributeName, "Salary") Salary
+                @*@Html.ValidationMessageFor(model => model.employeeJobSeeker.sex)*@
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SearchName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SearchName)
+                @Html.ValidationMessageFor(model => model.SearchName)
+               
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

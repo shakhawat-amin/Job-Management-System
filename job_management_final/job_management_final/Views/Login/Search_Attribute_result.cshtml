@@ -1,0 +1,62 @@
+﻿@model job_management_final.Models.JobAppliedViewModel
+
+@{
+    ViewBag.Title = "Search_Attribute_result";
+}
+
+<h2>Search_Attribute_result</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.job_circularsJobSeeker.First().title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.job_circularsJobSeeker.First().salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.job_circularsJobSeeker.First().deadline)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.job_circularsJobSeeker.First().experience)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.job_circularsJobSeeker.First().vacancy)
+        </th>
+        <th>
+            Office name
+            @*@Html.DisplayNameFor(model => model.)*@
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.job_circularsJobSeeker)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.deadline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.experience)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vacancy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.employeer.office_name)
+            </td>
+            <td>
+                @Html.ActionLink("Apply", "Apply_JobSeeker", new { employee_id = Model.EmployeeJobSeeker.id_employee, jc_id = item.id_job_circular }, new { @class = "btn btn-primary" })
+                @*@Html.ActionLink("Details", "Details", new { id = item.id_job_circular }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id_job_circular }, new { @class = "btn btn-primary" })*@
+            </td>
+        </tr>
+    }
+
+</table>

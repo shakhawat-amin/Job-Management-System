@@ -1,0 +1,225 @@
+﻿@model job_management_final.Models.JobSeekerViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>employee</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.employeeJobSeeker.id_employee, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.employeeJobSeeker.id_employee)
+                    @Html.ValidationMessageFor(model => model.employeeJobSeeker.id_employee)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.userJobSeeker.user_role, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.userJobSeeker.user_role)
+                    @Html.ValidationMessageFor(model => model.userJobSeeker.user_role)
+                </div>
+            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.userJobSeeker.id_user, "id_user", new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("id_user", String.Empty)
+                            @Html.ValidationMessageFor(model => model.userJobSeeker.id_user)
+                        </div>
+                    </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.userJobSeeker.username, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.userJobSeeker.username)
+                @Html.ValidationMessageFor(model => model.userJobSeeker.username)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.userJobSeeker.email, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.userJobSeeker.email)
+                @Html.ValidationMessageFor(model => model.userJobSeeker.email)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.userJobSeeker.password, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.PasswordFor(model => model.userJobSeeker.password)
+                @Html.ValidationMessageFor(model => model.userJobSeeker.password)
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.employeeJobSeeker.age, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.employeeJobSeeker.age)
+                @Html.ValidationMessageFor(model => model.employeeJobSeeker.age)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.employeeJobSeeker.sex, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(model => model.employeeJobSeeker.sex, "male")   Male
+                @Html.RadioButtonFor(model => model.employeeJobSeeker.sex, "female") Female
+                @Html.ValidationMessageFor(model => model.employeeJobSeeker.sex)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.employeeJobSeeker.first_name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.employeeJobSeeker.first_name)
+                @Html.ValidationMessageFor(model => model.employeeJobSeeker.first_name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.employeeJobSeeker.last_name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.employeeJobSeeker.last_name)
+                @Html.ValidationMessageFor(model => model.employeeJobSeeker.last_name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.employeeJobSeeker.father_name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.employeeJobSeeker.father_name)
+                @Html.ValidationMessageFor(model => model.employeeJobSeeker.father_name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.employeeJobSeeker.mother_name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.employeeJobSeeker.mother_name)
+                @Html.ValidationMessageFor(model => model.employeeJobSeeker.mother_name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.employeeJobSeeker.contact_number, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.employeeJobSeeker.contact_number)
+                @Html.ValidationMessageFor(model => model.employeeJobSeeker.contact_number)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.employeeJobSeeker.local_address, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.employeeJobSeeker.local_address)
+                @Html.ValidationMessageFor(model => model.employeeJobSeeker.local_address)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.employeeJobSeeker.parmanent_address, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.employeeJobSeeker.parmanent_address)
+                @Html.ValidationMessageFor(model => model.employeeJobSeeker.parmanent_address)
+            </div>
+        </div>
+        @*<div class="form-group">
+                    @Html.LabelFor(model => model.educationSSCJobseeker.degree_name, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.educationSSCJobseeker.degree_name)
+                        @Html.ValidationMessageFor(model => model.educationSSCJobseeker.degree_name)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.educationSSCJobseeker.scale, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.educationSSCJobseeker.scale)
+                        @Html.ValidationMessageFor(model => model.educationSSCJobseeker.scale)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.educationSSCJobseeker.score, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.educationSSCJobseeker.score)
+                        @Html.ValidationMessageFor(model => model.educationSSCJobseeker.score)
+                    </div>
+                </div>
+                @*<div class="form-group">
+                    @Html.LabelFor(model => model.educationSSCJobseeker.passing_year, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.educationSSCJobseeker.passing_year)
+                        @Html.ValidationMessageFor(model => model.educationSSCJobseeker.passing_year)
+                    </div>
+                </div>*
+                <div class="form-group">
+                    @Html.LabelFor(model => model.educationSSCJobseeker.institute_name, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.educationSSCJobseeker.institute_name)
+                        @Html.ValidationMessageFor(model => model.educationSSCJobseeker.institute_name)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.educationHSCJoobseeker.degree_name, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.educationHSCJoobseeker.degree_name)
+                        @Html.ValidationMessageFor(model => model.educationHSCJoobseeker.degree_name)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.educationHSCJoobseeker.scale, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.educationHSCJoobseeker.scale)
+                        @Html.ValidationMessageFor(model => model.educationHSCJoobseeker.scale)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.educationHSCJoobseeker.score, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.educationHSCJoobseeker.score)
+                        @Html.ValidationMessageFor(model => model.educationHSCJoobseeker.score)
+                    </div>
+                </div>
+                <div class="form-group">
+            @Html.LabelFor(model => model.educationSSCJobseeker.passing_year, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.educationSSCJobseeker.passing_year)
+                @Html.ValidationMessageFor(model => model.educationSSCJobseeker.passing_year)
+            </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.educationHSCJoobseeker.institute_name, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.educationHSCJoobseeker.institute_name)
+                        @Html.ValidationMessageFor(model => model.educationHSCJoobseeker.institute_name)
+                        </div>
+                    </div>*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@*<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

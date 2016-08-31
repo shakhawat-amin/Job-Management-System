@@ -1,0 +1,84 @@
+﻿@model job_management_final.job_circular
+
+@{
+    ViewBag.Title = "Job_Circular_employeer";
+}
+
+<h2>Job Circular</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>job circular</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.id_job_circular, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.id_job_circular)
+                    @Html.ValidationMessageFor(model => model.id_job_circular)
+                </div>
+            </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.title, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.title)
+                @Html.ValidationMessageFor(model => model.title)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.salary, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.salary)
+                @Html.ValidationMessageFor(model => model.salary)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.deadline, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.deadline)
+                @Html.ValidationMessageFor(model => model.deadline)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.experience, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.experience) (In Years)
+                @Html.ValidationMessageFor(model => model.experience)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.vacancy, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.vacancy)
+                @Html.ValidationMessageFor(model => model.vacancy)
+            </div>
+        </div>
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.id_employeer, "id_employeer", new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("id_employeer", String.Empty)
+                    @Html.ValidationMessageFor(model => model.id_employeer)
+                </div>
+            </div>*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Next" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+@*<div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@

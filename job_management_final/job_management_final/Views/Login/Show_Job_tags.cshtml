@@ -1,0 +1,30 @@
+﻿@model IEnumerable<job_management_final.employee_tag>
+
+@{
+    ViewBag.Title = "Show_Job_tags";
+}
+
+<h2>Show_Job_tags</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tag_name)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tag_name)
+            </td>
+
+        </tr>
+    }
+</table>
+@Html.ActionLink("Back", "Show_Job_tags2", @Model.First(), new { @class = "btn btn-danger" })
+
+

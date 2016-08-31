@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="job_management_twoModelStoreContainer" CdmEntityContainer="job_management_twoEntities">
+    <EntitySetMapping Name="educations">
+      <EntityTypeMapping TypeName="job_management_twoModel.education">
+        <MappingFragment StoreEntitySet="education">
+          <ScalarProperty Name="id_education" ColumnName="id_education" />
+          <ScalarProperty Name="id_employee" ColumnName="id_employee" />
+          <ScalarProperty Name="degree_name" ColumnName="degree_name" />
+          <ScalarProperty Name="score" ColumnName="score" />
+          <ScalarProperty Name="scale" ColumnName="scale" />
+          <ScalarProperty Name="passing_year" ColumnName="passing_year" />
+          <ScalarProperty Name="institute_name" ColumnName="institute_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employees">
+      <EntityTypeMapping TypeName="job_management_twoModel.employee">
+        <MappingFragment StoreEntitySet="employee">
+          <ScalarProperty Name="id_employee" ColumnName="id_employee" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="father_name" ColumnName="father_name" />
+          <ScalarProperty Name="mother_name" ColumnName="mother_name" />
+          <ScalarProperty Name="contact_number" ColumnName="contact_number" />
+          <ScalarProperty Name="local_address" ColumnName="local_address" />
+          <ScalarProperty Name="parmanent_address" ColumnName="parmanent_address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employee_tag">
+      <EntityTypeMapping TypeName="job_management_twoModel.employee_tag">
+        <MappingFragment StoreEntitySet="employee_tag">
+          <ScalarProperty Name="id_employee_tag" ColumnName="id_employee_tag" />
+          <ScalarProperty Name="tag_name" ColumnName="tag_name" />
+          <ScalarProperty Name="id_employee" ColumnName="id_employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employeers">
+      <EntityTypeMapping TypeName="job_management_twoModel.employeer">
+        <MappingFragment StoreEntitySet="employeer">
+          <ScalarProperty Name="id_employeer" ColumnName="id_employeer" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="office_name" ColumnName="office_name" />
+          <ScalarProperty Name="contact_number" ColumnName="contact_number" />
+          <ScalarProperty Name="office_address" ColumnName="office_address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="job_applicant">
+      <EntityTypeMapping TypeName="job_management_twoModel.job_applicant">
+        <MappingFragment StoreEntitySet="job_applicant">
+          <ScalarProperty Name="id_job_applicant" ColumnName="id_job_applicant" />
+          <ScalarProperty Name="id_employee" ColumnName="id_employee" />
+          <ScalarProperty Name="id_job_circular" ColumnName="id_job_circular" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="job_applied">
+      <EntityTypeMapping TypeName="job_management_twoModel.job_applied">
+        <MappingFragment StoreEntitySet="job_applied">
+          <ScalarProperty Name="id_job_applied" ColumnName="id_job_applied" />
+          <ScalarProperty Name="id_employee" ColumnName="id_employee" />
+          <ScalarProperty Name="id_job_circular" ColumnName="id_job_circular" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="job_circular">
+      <EntityTypeMapping TypeName="job_management_twoModel.job_circular">
+        <MappingFragment StoreEntitySet="job_circular">
+          <ScalarProperty Name="id_job_circular" ColumnName="id_job_circular" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="deadline" ColumnName="deadline" />
+          <ScalarProperty Name="experience" ColumnName="experience" />
+          <ScalarProperty Name="vacancy" ColumnName="vacancy" />
+          <ScalarProperty Name="id_employeer" ColumnName="id_employeer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="job_circular_tag">
+      <EntityTypeMapping TypeName="job_management_twoModel.job_circular_tag">
+        <MappingFragment StoreEntitySet="job_circular_tag">
+          <ScalarProperty Name="id_job_circular_tag" ColumnName="id_job_circular_tag" />
+          <ScalarProperty Name="tag_name" ColumnName="tag_name" />
+          <ScalarProperty Name="id_job_circular" ColumnName="id_job_circular" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="job_management_twoModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="user_role" ColumnName="user_role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

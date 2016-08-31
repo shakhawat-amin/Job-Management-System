@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home";
+    //Layout = "myLayout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>register</h2>
+        <p>
+            Open an account with us
+        </p>
+        <p>@Html.ActionLink("Register", "RegisterRole", "NewAccount", null, new { @class = "btn btn-default" })</p>
+        <!--<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Register &raquo;</a></p>  -->
+    </div>
+    <div class="col-md-4">
+        <h2>Log in</h2>
+        <p>Access your existing account</p>
+        <p>@Html.ActionLink("Log in", "index", "Login", null, new { @class = "btn btn-default" })</p>
+        <!-- <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Log in &raquo;</a></p> -->
+    </div>
+
+
+</div>
+@section scripts {
+    <script> var testing = true; </script>
+}
+
+@*your browser name is @Request.Browser.Browser .
+    @{var amounts = new List<Decimal> { 100, 25.50m, -40, 27.589m }; }
+    <ul>
+         @foreach (decimal amount in amounts)
+         {
+             <li> @formatAmount(amount) </li>
+         }
+    </ul>
+    @helper formatAmount (decimal amount)
+    {
+                 var color = "green";
+                 if (amount < 0)
+                 {
+                     color = "red";
+                 }
+                 <span style="color:@color"> @String.Format("{0:c}", amount)</span>
+    }
+*@
